@@ -26,6 +26,7 @@ function App(){
   const [loadingContent,setLoadingContent] = useState(true);
   const [events,setEvents] = useState([]);
   const [docs,setDocs] = useState([]);
+  const [pages,setPages] = useState([]);
   const [form,setForm] = useState({full_name:'',email:'',phone:'',subject:'',message:''});
   const [sending,setSending] = useState(false);
   const [notice,setNotice] = useState('');
@@ -35,16 +36,18 @@ function App(){
     let active=true;
     async function load(){
       if(!supabase){setBackend('');setLoadingContent(false);return;}
-      const [n,e,d] = await Promise.all([
+      const [n,e,d,p] = await Promise.all([
         supabase.from('news_posts').select('id,title,slug,excerpt,content,published_at,cover_image_url').eq('status','published').order('published_at',{ascending:false}).limit(3),
         supabase.from('events').select('id,title,slug,description,venue,starts_at').eq('status','published').gte('starts_at',new Date().toISOString()).order('starts_at',{ascending:true}).limit(3),
-        supabase.from('public_documents').select('id,title,description,file_url,category').eq('is_public',true).order('created_at',{ascending:false}).limit(8)
+        supabase.from('public_documents').select('id,title,description,file_url,category').eq('is_public',true).order('created_at',{ascending:false}).limit(8),
+        supabase.from('site_pages').select('id,title,slug,summary,content').eq('status','published').order('created_at',{ascending:false}).limit(8)
       ]);
       if(!active)return;
       setLoadingContent(false);
       if(!n.error)setNews(n.data||[]);
       if(!e.error)setEvents(e.data||[]);
       if(!d.error)setDocs(d.data||[]);
+      if(!p.error)setPages(p.data||[]);
       setBackend('');
     }
     load().catch(()=>{if(active){setLoadingContent(false);setBackend('Não foi possível actualizar os conteúdos neste momento.');}}); return ()=>{active=false};
@@ -72,6 +75,7 @@ function App(){
     <main>
       <section className="hero" id="inicio"><div className="wrap hero-content"><div className="eyebrow">PROJECTO ECO NO SILÊNCIO</div><h1>O silêncio termina.<br/><em>O trabalho começa.</em></h1><p>Partido Social Juntos Pelo Povo — S.J.P.P.</p><p className="hero-sub">Fazer pelo Povo e pela Pátria.</p><a className="btn btn-light" href="#partido">Conhecer o partido <span>→</span></a></div><div className="hero-side-note"><span>COMPROMISSO INSTITUCIONAL</span><b>Angola</b><i>Participação · Dignidade · Responsabilidade</i></div></section>
       <section className="intro section" id="partido"><div className="wrap two-col"><div><div className="eyebrow dark">QUEM SOMOS</div><h2>Uma visão de país centrada na dignidade humana.</h2></div><div className="intro-copy"><p>O Partido Social Juntos Pelo Povo (S.J.P.P.) apresenta o projecto “Eco no Silêncio”, orientado por uma visão de Angola justa, unida e solidária, onde a dignidade humana, as oportunidades e a participação cidadã ocupam lugar central.</p><p>A sua missão institucional é defender os interesses dos cidadãos, com atenção às comunidades vulneráveis, promovendo o diálogo, a cidadania activa e políticas públicas assentes na justiça social, transparência e respeito pelos direitos humanos.</p></div></div></section>
+      <section className="section institutional-pages"><div className="wrap"><div className="section-heading"><div><div className="eyebrow dark">INFORMAÇÃO INSTITUCIONAL</div><h2>Conheça a organização</h2></div><p>Conteúdos institucionais disponibilizados e actualizados pela administração do portal.</p></div><div className="content-grid">{pages.length?pages.map(page=><article className="content-card" key={page.id}><div className="card-tag">INFORMAÇÃO OFICIAL</div><h3>{page.title}</h3><p>{page.summary||page.content}</p></article>):<div className="empty-state">Informações complementares serão publicadas nesta área pelos responsáveis do portal.</div>}</div></div></section>
       <section className="values"><div className="wrap values-grid"><div><span className="value-number">01</span><h3>Visão</h3><p>Uma Angola justa, unida e solidária, com dignidade, oportunidades e participação cidadã.</p></div><div><span className="value-number">02</span><h3>Missão</h3><p>Defender os interesses dos cidadãos e contribuir para respostas aos desafios sociais e económicos.</p></div><div><span className="value-number">03</span><h3>Valores</h3><p>Justiça social, dignidade humana, progresso sustentável, família, ética, transparência e responsabilidade pública.</p></div></div></section>
       <section className="section" id="programa"><div className="wrap"><div className="section-heading"><div><div className="eyebrow dark">LINHAS PROGRAMÁTICAS</div><h2>Áreas de compromisso público</h2></div><p>Oito eixos de referência para a organização do programa político e do debate público.</p></div><div className="pillar-grid">{pillars.map((p,i)=><article className="pillar" key={p[0]}><span>{String(i+1).padStart(2,'0')}</span><h3>{p[0]}</h3><p>{p[1]}</p></article>)}</div></div></section>
       <section className="quote-band"><div className="wrap"><p>“A Pátria e o Povo, chama por nós!”</p><span>Juntos Pelo Povo. Juntos por Angola.</span></div></section>
