@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createClient } from '@supabase/supabase-js';
 import './styles.css';
+import Admin from './Admin.jsx';
 
 const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -79,4 +80,5 @@ function App(){
     <footer><div className="wrap footer-inner"><div><b>S.J.P.P. — JUNTOS PELO POVO</b><p>Eco no Silêncio · Fazer pelo Povo e pela Pátria.</p></div><span>© {new Date().getFullYear()} S.J.P.P. Todos os direitos reservados.</span></div></footer>
   </div>
 }
-createRoot(document.getElementById('root')).render(<App/>);
+const Root = window.location.pathname.startsWith('/admin') ? <Admin/> : <App/>;
+createRoot(document.getElementById('root')).render(Root);
