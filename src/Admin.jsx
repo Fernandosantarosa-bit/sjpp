@@ -3,7 +3,7 @@ import {createClient} from '@supabase/supabase-js';
 import './admin.css';
 const supabase=createClient(import.meta.env.VITE_SUPABASE_URL,import.meta.env.VITE_SUPABASE_ANON_KEY);
 const modules={
- news_posts:{label:'Notícias',fields:[['title','Título','text'],['slug','Slug','slug'],['excerpt','Resumo','text'],['content','Conteúdo','textarea'],['status','Estado','status']]},
+ news_posts:{label:'Notícias',fields:[['title','Título','text'],['slug','Slug','slug'],['excerpt','Resumo','text'],['cover_image_url','Imagem de capa (URL)','url'],['content','Conteúdo','textarea'],['status','Estado','status']]},
  events:{label:'Agenda',fields:[['title','Título','text'],['slug','Slug','slug'],['description','Descrição','textarea'],['venue','Local','text'],['starts_at','Data e hora','datetime'],['status','Estado','status']]},
  public_documents:{label:'Documentos',fields:[['title','Título','text'],['description','Descrição','text'],['file_url','URL do documento','url'],['category','Categoria','text'],['is_public','Documento público','boolean']]},
  site_pages:{label:'Páginas',fields:[['title','Título','text'],['slug','Slug','slug'],['summary','Resumo','text'],['content','Conteúdo','textarea'],['status','Estado','status']]}
