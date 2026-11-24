@@ -17,3 +17,5 @@
 .admin-editor input:focus,.admin-editor textarea:focus,.admin-editor select:focus,.admin-login input:focus{outline:2px solid #16834b35;border-color:#16834b}
 @media(max-width:850px){.admin-side{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:center}.admin-side .admin-mark,.admin-side>small{grid-column:1/-1}.admin-side .logout{margin-top:0}}
 @media(max-width:520px){.admin-side{grid-template-columns:1fr 1fr}.admin-main{padding:14px}.admin-editor,.admin-list{padding:17px}.admin-list article{align-items:flex-start;flex-direction:column}.record-actions{width:100%}.record-actions button{flex:1}}
+
+.consent-audit{display:block;margin-top:6px;color:#647584;font-size:11px;line-height:1.5}
