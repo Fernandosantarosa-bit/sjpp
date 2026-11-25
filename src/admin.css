@@ -135,3 +135,34 @@
 .task-actions button:hover{border-color:#16834b;color:#16834b}
 @media(max-width:1100px){.tasks-panel{grid-template-columns:1fr}}
 @media(max-width:620px){.task-editor,.tasks-list{padding:16px}.tasks-toolbar{align-items:flex-start;flex-direction:column}.tasks-toolbar select{width:100%}.task-item{align-items:flex-start;flex-direction:column}.task-actions{justify-content:flex-start;width:100%}.task-summary span{padding:9px}.task-summary b{font-size:19px}}
+
+/* Calendário institucional integrado */
+.calendar-panel{display:grid;gap:18px}
+.calendar-toolbar{display:flex;justify-content:space-between;align-items:center;gap:18px;padding:22px 25px;background:#fff;border:1px solid #e5ecf1;border-radius:15px;border-top:3px solid #16834b}
+.calendar-toolbar small{font-size:9px;letter-spacing:1.7px;color:#16834b;font-weight:800}
+.calendar-toolbar h2{font:700 24px Georgia,serif;color:#17384e;margin:6px 0;text-transform:capitalize}
+.calendar-toolbar p{font-size:11px;color:#82909b;margin:0}
+.calendar-nav{display:flex;gap:7px;flex-wrap:wrap}
+.calendar-nav button,.calendar-agenda article>button,.calendar-create{border:1px solid #dfe8ed;border-radius:8px;background:#fff;color:#36546a;padding:9px 12px;font-size:10px;font-weight:700;cursor:pointer}
+.calendar-nav button:hover,.calendar-agenda article>button:hover{border-color:#16834b;color:#16834b}
+.calendar-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:1px;background:#e7edf1;border:1px solid #e7edf1;border-radius:13px;overflow:hidden}
+.calendar-weekday{background:#f5f8f9;padding:12px 8px;text-align:center;font-size:10px;font-weight:800;color:#63798a}
+.calendar-day{background:#fff;min-height:112px;padding:8px;display:flex;flex-direction:column;gap:5px;min-width:0}
+.calendar-day.outside{background:#f8fafb;color:#aeb8c0}
+.calendar-day.today{box-shadow:inset 0 0 0 2px #16834b}
+.calendar-day-number{font-size:11px;font-weight:800;color:#38546a}
+.calendar-day.today .calendar-day-number{display:grid;place-items:center;background:#16834b;color:#fff;border-radius:50%;width:23px;height:23px}
+.calendar-event{display:block;width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;border:0;border-left:3px solid #d39b2b;border-radius:4px;background:#fff5df;color:#775719;padding:5px;font-size:9px;cursor:pointer}
+.calendar-event.published{border-left-color:#16834b;background:#eaf6ee;color:#176b42}
+.calendar-day>small{font-size:9px;color:#778894}
+.calendar-agenda{background:#fff;border:1px solid #e5ecf1;border-radius:15px;padding:21px}
+.calendar-agenda h3{font:700 18px Georgia,serif;color:#18364d;margin:0 0 5px}
+.calendar-agenda>div>p{font-size:11px;color:#8795a1;margin:0 0 14px}
+.calendar-agenda article{display:grid;grid-template-columns:48px minmax(0,1fr) auto auto;gap:12px;align-items:center;padding:13px 0;border-top:1px solid #edf1f4}
+.agenda-date{width:42px;height:45px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:#eff7f2;border-radius:8px;color:#176b42}
+.agenda-date b{font-size:18px;line-height:1}.agenda-date span{font-size:9px;text-transform:uppercase}
+.calendar-agenda article strong{font-size:11px;color:#28445a}
+.calendar-agenda article p{font-size:10px;color:#81909c;margin:4px 0 0}
+.calendar-create{margin-top:15px;background:#173b4d;color:#fff;border-color:#173b4d}
+@media(max-width:850px){.calendar-day{min-height:88px;padding:5px}.calendar-weekday{font-size:9px;padding:9px 2px}.calendar-event{font-size:8px;padding:4px}}
+@media(max-width:620px){.calendar-toolbar{align-items:flex-start;flex-direction:column;padding:17px}.calendar-nav{width:100%}.calendar-nav button{flex:1}.calendar-grid{gap:1px}.calendar-day{min-height:67px;padding:3px}.calendar-weekday{font-size:8px;padding:8px 0}.calendar-day-number{font-size:9px}.calendar-day.today .calendar-day-number{width:19px;height:19px}.calendar-event{font-size:0;height:5px;padding:0;border-radius:5px}.calendar-day>small{font-size:8px}.calendar-agenda{padding:15px}.calendar-agenda article{grid-template-columns:40px minmax(0,1fr) auto}.calendar-agenda article .status-pill{display:none}.calendar-agenda article>button{grid-column:2/-1;justify-self:start}}
