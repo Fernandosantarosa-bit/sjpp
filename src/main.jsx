@@ -70,11 +70,11 @@ function App(){
 
   const closeMenu=()=>setMenuOpen(false);
   return <div>
-    <div className="national-colours" aria-hidden="true"><span></span><span></span><span></span></div><div className="topline"><div className="wrap topline-inner"><span>Partido Social Juntos Pelo Povo — S.J.P.P.</span><span>Luanda, Angola · <a href="mailto:juntospelopovosjpp@gmail.com">juntospelopovosjpp@gmail.com</a></span></div></div>
+    <a className="skip-link" href="#conteudo">Saltar para o conteúdo</a><div className="national-colours" aria-hidden="true"><span></span><span></span><span></span></div><div className="topline"><div className="wrap topline-inner"><span>Partido Social Juntos Pelo Povo — S.J.P.P.</span><span>Luanda, Angola · <a href="mailto:juntospelopovosjpp@gmail.com">juntospelopovosjpp@gmail.com</a></span></div></div>
     <header className="header"><div className="wrap nav">
       <a className="brand" href="#inicio" onClick={closeMenu}><span className="brand-mark">S.J.P.P.</span><span><b>JUNTOS PELO POVO</b><small>FAZER PELO POVO E PELA PÁTRIA</small></span></a>
       <button className="menu-toggle" onClick={()=>setMenuOpen(!menuOpen)} aria-label={menuOpen?"Fechar menu":"Abrir menu"} aria-expanded={menuOpen}>☰</button>
-      <nav className={menuOpen?'nav-links open':'nav-links'}>{[['Início','#inicio'],['O Partido','#partido'],['Estrutura','#estrutura'],['Programa','#programa'],['Notícias','#noticias'],['Agenda','#agenda'],['Documentos','#documentos'],['Contactos','#contactos']].map(([t,h])=><a key={h} href={h} onClick={closeMenu}>{t}</a>)}</nav>
+      <nav aria-label="Navegação principal" className={menuOpen?'nav-links open':'nav-links'}>{[['Início','#inicio'],['O Partido','#partido'],['Estrutura','#estrutura'],['Programa','#programa'],['Notícias','#noticias'],['Agenda','#agenda'],['Documentos','#documentos'],['Contactos','#contactos']].map(([t,h])=><a key={h} href={h} onClick={closeMenu}>{t}</a>)}</nav>
     </div></header>
     <main>
       <section className="hero" id="inicio"><div className="wrap hero-content"><div className="eyebrow">PROJECTO ECO NO SILÊNCIO</div><h1>O silêncio termina.<br/><em>O trabalho começa.</em></h1><p>Partido Social Juntos Pelo Povo — S.J.P.P.</p><p className="hero-sub">Fazer pelo Povo e pela Pátria.</p><a className="btn btn-light" href="#partido">Conhecer o partido <span>→</span></a></div><div className="hero-side-note"><span>COMPROMISSO INSTITUCIONAL</span><b>Angola</b><i>Participação · Dignidade · Responsabilidade</i></div></section>
