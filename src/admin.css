@@ -166,3 +166,42 @@
 .calendar-create{margin-top:15px;background:#173b4d;color:#fff;border-color:#173b4d}
 @media(max-width:850px){.calendar-day{min-height:88px;padding:5px}.calendar-weekday{font-size:9px;padding:9px 2px}.calendar-event{font-size:8px;padding:4px}}
 @media(max-width:620px){.calendar-toolbar{align-items:flex-start;flex-direction:column;padding:17px}.calendar-nav{width:100%}.calendar-nav button{flex:1}.calendar-grid{gap:1px}.calendar-day{min-height:67px;padding:3px}.calendar-weekday{font-size:8px;padding:8px 0}.calendar-day-number{font-size:9px}.calendar-day.today .calendar-day-number{width:19px;height:19px}.calendar-event{font-size:0;height:5px;padding:0;border-radius:5px}.calendar-day>small{font-size:8px}.calendar-agenda{padding:15px}.calendar-agenda article{grid-template-columns:40px minmax(0,1fr) auto}.calendar-agenda article .status-pill{display:none}.calendar-agenda article>button{grid-column:2/-1;justify-self:start}}
+
+/* Plano estratégico, metas e histórico de indicadores */
+.objectives-panel{display:grid;grid-template-columns:minmax(290px,.85fr) minmax(0,1.6fr);gap:20px;align-items:start}
+.objective-editor,.objectives-list{background:#fff;border:1px solid #e5ecf1;border-radius:16px;padding:24px;box-shadow:0 8px 28px #19375008}
+.objective-editor{border-top:3px solid #16834b}
+.objective-editor label{display:flex;flex-direction:column;gap:7px;margin:13px 0;font-size:11px;font-weight:650;color:#526678}
+.objective-editor input,.objective-editor textarea,.objective-editor select,.progress-update input{width:100%;box-sizing:border-box;border:1px solid #dce5ec;border-radius:9px;background:#fbfcfd;padding:11px 12px;color:#1b3449;font:inherit}
+.objective-editor textarea{min-height:100px;resize:vertical}
+.objective-editor input:focus,.objective-editor textarea:focus,.objective-editor select:focus,.progress-update input:focus{outline:0;border-color:#16834b;box-shadow:0 0 0 4px #16834b14;background:#fff}
+.objective-fields{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.objective-fields label:first-child,.objective-fields label:nth-child(7){grid-column:1/-1}
+.objectives-list{border-top:3px solid #c93636}
+.objectives-list-head{display:grid;gap:13px;margin-bottom:16px}
+.objectives-list-head h2{font:700 21px Georgia,serif;color:#17344b;margin:0 0 5px}
+.objectives-list-head p{font-size:11px;color:#8492a0;margin:0}
+.objective-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.objective-stats span{display:flex;flex-direction:column;gap:3px;padding:10px;background:#f5f8f9;border-radius:9px;color:#718395;font-size:9px}
+.objective-stats b{font-size:20px;color:#18384e}
+.objective-card{padding:17px 0;border-top:1px solid #edf1f4}
+.objective-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.objective-card-head small{font-size:9px;color:#16834b;font-weight:800;text-transform:uppercase;letter-spacing:.8px}
+.objective-card-head h3{font-size:14px;color:#203e54;margin:5px 0}
+.objective-card>p{font-size:11px;color:#758594;line-height:1.6;white-space:pre-wrap}
+.objective-status{flex-shrink:0;border-radius:20px;padding:6px 9px;font-size:9px;font-weight:800;background:#eef2f5;color:#637483}
+.objective-status.in_progress{background:#e8f2ff;color:#356da5}.objective-status.at_risk{background:#fff0df;color:#a65d13}.objective-status.completed{background:#e7f5ec;color:#167346}.objective-status.paused{background:#f0eeee;color:#777}
+.objective-indicator{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:13px 0 8px;font-size:10px;color:#70808d}
+.objective-indicator strong{font-size:13px;color:#193b50}.objective-indicator strong small{font-size:10px;color:#8a98a3;font-weight:500}
+.objective-progress{height:8px;background:#edf2f4;border-radius:99px;overflow:hidden}
+.objective-progress i{display:block;height:100%;background:linear-gradient(90deg,#16834b,#a9bd43);border-radius:99px}
+.objective-meta{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;margin:10px 0;color:#8a98a3;font-size:9px}
+.progress-update{display:grid;grid-template-columns:1fr 1.3fr auto;align-items:end;gap:8px;margin-top:13px;padding:12px;background:#f7faf8;border-radius:10px}
+.progress-update label{display:flex;flex-direction:column;gap:5px;font-size:9px;color:#607386;font-weight:700}
+.progress-update input{padding:9px;font-size:10px}
+.progress-update button,.objective-actions button{border:1px solid #dfe8ed;border-radius:8px;background:#fff;color:#36546a;padding:9px 10px;font-size:10px;font-weight:700;cursor:pointer}
+.progress-update button{background:#173b4d;border-color:#173b4d;color:#fff}
+.objective-actions{display:flex;justify-content:flex-end;gap:7px;margin-top:10px}
+.objective-actions button:last-child{color:#a83a34}
+@media(max-width:1100px){.objectives-panel{grid-template-columns:1fr}}
+@media(max-width:620px){.objective-editor,.objectives-list{padding:16px}.progress-update{grid-template-columns:1fr}.progress-update button{width:100%}.objective-card-head{flex-direction:column}.objective-fields{grid-template-columns:1fr}.objective-fields label:first-child,.objective-fields label:nth-child(7){grid-column:auto}}
