@@ -56,7 +56,8 @@ function App(){
 
   async function submit(e){
     e.preventDefault(); setNotice('');
-    if(!form.full_name.trim()||!form.subject.trim()||form.message.trim().length<10){setNotice('Preencha o nome, assunto e uma mensagem com pelo menos 10 caracteres.');return;}\n    if(!form.email.trim()&&!form.phone.trim()){setNotice('Indique pelo menos um contacto: email ou telefone.');return;}
+    if(!form.full_name.trim()||!form.subject.trim()||form.message.trim().length<10){setNotice('Preencha o nome, assunto e uma mensagem com pelo menos 10 caracteres.');return;}
+    if(!form.email.trim()&&!form.phone.trim()){setNotice('Indique pelo menos um contacto: email ou telefone.');return;}
     if(!form.privacyConsent){setNotice('É necessário aceitar a Política de Privacidade para enviar a mensagem.');return;}
     if(!supabase){setNotice('O formulário está preparado. A ligação à base de dados será activada após configurar as variáveis Supabase.');return;}
     setSending(true);
