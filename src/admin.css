@@ -233,3 +233,25 @@
 .report-documents article small,.report-documents article time{font-size:9px;color:#82919c}
 .report-documents article time{white-space:nowrap}
 @media(max-width:520px){.report-documents article{align-items:flex-start;flex-direction:column;gap:5px}}
+
+
+/* Auditoria administrativa e rastreabilidade */
+.audit-panel{display:grid;gap:18px}
+.audit-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.audit-summary article{display:grid;gap:5px;padding:18px;background:#fff;border:1px solid #e5ecf1;border-radius:12px}
+.audit-summary strong{font-size:28px;color:#173b4d}
+.audit-summary span{font-size:10px;color:#718395}
+.audit-list{background:#fff;border:1px solid #e5ecf1;border-radius:14px;padding:18px;overflow:hidden}
+.audit-list-head,.audit-list article{display:grid;grid-template-columns:1.2fr 1.25fr 1fr 1.35fr;gap:12px;align-items:center}
+.audit-list-head{padding:10px 8px;background:#f5f8f9;border-radius:8px;color:#6c7e8c;font-size:9px;font-weight:800;text-transform:uppercase}
+.audit-list article{padding:14px 8px;border-bottom:1px solid #edf1f4}
+.audit-list article:last-of-type{border-bottom:0}
+.audit-list time,.audit-list code,.audit-list article>span{font-size:10px;color:#536b7b;overflow-wrap:anywhere}
+.audit-list article>span{display:grid;gap:5px}
+.audit-list article b{font-size:11px;color:#29485d}
+.audit-list article small{font-size:9px;color:#84929d;line-height:1.45}
+.audit-list article code{font-size:9px}
+.audit-list>p{padding:20px;text-align:center;color:#84929d;font-size:11px}
+.audit-footnote{font-size:10px;line-height:1.6;color:#84929d;padding:12px 14px;background:#f7f9fa;border-radius:9px}
+@media(max-width:850px){.audit-list-head{display:none}.audit-list article{grid-template-columns:1fr 1fr;gap:8px}.audit-list article time{grid-column:1/-1}.audit-summary{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.audit-list{padding:12px}.audit-list article{grid-template-columns:1fr}.audit-list article time{grid-column:auto}.audit-summary strong{font-size:24px}}
