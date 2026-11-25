@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sjpp-app-v1';
+const CACHE_NAME = 'sjpp-app-v2';
 const APP_SHELL = ['/', '/manifest.webmanifest', '/logo-sjpp.svg', '/app-icon.svg'];
 
 self.addEventListener('install', event => {
