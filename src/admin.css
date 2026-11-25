@@ -205,3 +205,5 @@
 .objective-actions button:last-child{color:#a83a34}
 @media(max-width:1100px){.objectives-panel{grid-template-columns:1fr}}
 @media(max-width:620px){.objective-editor,.objectives-list{padding:16px}.progress-update{grid-template-columns:1fr}.progress-update button{width:100%}.objective-card-head{flex-direction:column}.objective-fields{grid-template-columns:1fr}.objective-fields label:first-child,.objective-fields label:nth-child(7){grid-column:auto}}
+
+.task-linked-objective{display:inline-block;margin:0 0 7px;padding:5px 8px;border-radius:7px;background:#edf6f0;color:#176b42;font-size:9px;font-weight:700}
