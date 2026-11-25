@@ -260,6 +260,6 @@
 /* Actualização manual dos indicadores do painel */
 .dashboard-welcome-actions{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:16px}
 .dashboard-welcome-actions>span{margin:0!important}
-.dashboard-refresh{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;border-radius:8px;padding:9px 13px;font:600 11px inherit;cursor:pointer;transition:background .2s,border-color .2s}
+.dashboard-refresh{border:1px solid rgba(255,255,255,.28);background:rgba(255,255,255,.08);color:#fff;border-radius:8px;padding:9px 13px;font:600 11px system-ui,sans-serif;cursor:pointer;transition:background .2s,border-color .2s}
 .dashboard-refresh:hover{background:rgba(255,255,255,.16);border-color:rgba(255,255,255,.5)}
 .dashboard-refresh:focus-visible{outline:3px solid #e2b77e;outline-offset:3px}
