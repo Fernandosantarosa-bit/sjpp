@@ -111,3 +111,15 @@
 .public-content-details>div{padding:12px 0 4px;color:#526575;font-size:13px;line-height:1.85;white-space:pre-line;overflow-wrap:anywhere}
 .public-content-details summary:focus-visible{outline:3px solid #e7bd37;outline-offset:4px}
 .content-card:not(.news-card)>.public-content-details{margin-left:0;margin-right:0}
+
+
+/* Centro de transparência documental */
+.documents-toolbar{display:grid;grid-template-columns:1.4fr 1fr;gap:16px;max-width:760px;margin:0 0 14px}
+.documents-toolbar label{display:block;color:#526474;font-size:12px;font-weight:700}
+.documents-toolbar input,.documents-toolbar select{display:block;width:100%;margin-top:7px;padding:12px 14px;border:1px solid #dce4e8;border-radius:2px;background:#fff;color:#183149;font:13px 'DM Sans',sans-serif}
+.documents-toolbar input:focus,.documents-toolbar select:focus{outline:2px solid #16834b35;border-color:var(--sjpp-green)}
+.documents-result-count{margin:0 0 16px;color:#71818b;font-size:12px}
+.transparency-note{margin-top:28px;padding:20px 22px;border-left:3px solid var(--sjpp-green);background:#edf4ef}
+.transparency-note b{display:block;color:#173b2b;font-size:13px}
+.transparency-note p{margin:8px 0 0;color:#5c7065;font-size:12px;line-height:1.75}
+@media(max-width:650px){.documents-toolbar{grid-template-columns:1fr;gap:12px}}
