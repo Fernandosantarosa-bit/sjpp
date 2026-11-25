@@ -100,3 +100,14 @@
 
 /* Instalação assistida e estado de ligação */
 .offline-banner{position:fixed;top:0;left:0;right:0;z-index:1001;padding:11px 16px;background:#7b2d25;color:#fff;text-align:center;font-size:12px;font-weight:600;box-shadow:0 3px 14px #0002}.offline-banner span{font-size:9px;margin-right:8px;color:#ffd56a}.install-help-backdrop{position:fixed;inset:0;z-index:1100;background:#071b2acc;display:grid;place-items:center;padding:20px}.install-help-dialog{position:relative;width:min(100%,470px);max-height:min(90vh,760px);overflow:auto;background:#fff;color:#183149;padding:34px;border-radius:12px;box-shadow:0 24px 80px #0005}.install-help-close{position:absolute;top:12px;right:14px;border:0;background:transparent;color:#526474;font-size:28px;cursor:pointer}.install-help-symbol{display:inline-flex;background:linear-gradient(135deg,#16834b 0 34%,#c93636 34% 68%,#f2c230 68%);color:#fff;padding:9px 12px;border-radius:4px;font-size:13px;font-weight:800;letter-spacing:1px}.install-help-dialog h2{margin:20px 0 8px;font-size:30px}.install-help-dialog>p{color:#667785;font-size:14px;line-height:1.65;margin:0 0 22px}.install-help-step{display:flex;flex-direction:column;gap:5px;padding:14px 0;border-top:1px solid #e7ecef}.install-help-step b{font-size:13px}.install-help-step span{font-size:12px;line-height:1.65;color:#687985}.install-help-action{margin-top:18px;width:100%;justify-content:center}.install-app-float{z-index:55}@media(max-width:650px){.install-help-dialog{padding:28px 22px}.offline-banner{font-size:11px}}
+
+
+/* Leitura integral de conteúdos públicos */
+.public-content-details{margin:16px 24px 0;border-top:1px solid #e7ecef;padding-top:12px}
+.public-content-details summary{display:inline-flex;align-items:center;gap:8px;cursor:pointer;color:var(--sjpp-green);font-size:12px;font-weight:700;list-style:none}
+.public-content-details summary::-webkit-details-marker{display:none}
+.public-content-details summary:after{content:'+';font-size:17px;font-weight:500}
+.public-content-details[open] summary:after{content:'−'}
+.public-content-details>div{padding:12px 0 4px;color:#526575;font-size:13px;line-height:1.85;white-space:pre-line;overflow-wrap:anywhere}
+.public-content-details summary:focus-visible{outline:3px solid #e7bd37;outline-offset:4px}
+.content-card:not(.news-card)>.public-content-details{margin-left:0;margin-right:0}
