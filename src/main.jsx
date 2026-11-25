@@ -91,5 +91,12 @@ function App(){
   </div>
 }
 const route=window.location.pathname.replace(/^\//,'').split('/')[0];
-const Root = route==='admin' ? <Admin/> : ['privacidade','termos','cookies','acessibilidade'].includes(route) ? <Legal type={route}/> : <App/>;
+const legalTitles={privacidade:'Política de Privacidade',termos:'Termos de Utilização',cookies:'Política de Cookies',acessibilidade:'Declaração de Acessibilidade'};
+if(route==='admin'){
+  document.title='Área Restrita | S.J.P.P.';
+  document.querySelector('meta[name="robots"]')?.setAttribute('content','noindex, nofollow');
+}else if(legalTitles[route]){
+  document.title=legalTitles[route]+' | S.J.P.P.';
+}
+const Root = route==='admin' ? <Admin/> : legalTitles[route] ? <Legal type={route}/> : <App/>;
 createRoot(document.getElementById('root')).render(Root);
