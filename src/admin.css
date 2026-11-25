@@ -216,3 +216,20 @@
 .objective-history>div small{grid-column:2;color:#738390;font-size:9px}
 .objective-history>small{font-size:9px;color:#8795a0}
 @media(max-width:520px){.objective-history>div{grid-template-columns:1fr}.objective-history>div small{grid-column:auto}}
+
+
+/* Relatórios: execução estratégica e registo documental */
+.report-objectives{display:grid;gap:10px;margin:8px 0 20px}
+.report-objectives article{display:grid;grid-template-columns:minmax(0,1fr) 54px;gap:8px;align-items:center;padding:12px;border:1px solid #e8eef1;border-radius:9px;background:#fbfcfd}
+.report-objectives article>div:first-child{display:grid;gap:4px}
+.report-objectives article b{font-size:11px;color:#29485d}
+.report-objectives article small{font-size:9px;color:#82919c}
+.report-objectives article>strong{text-align:right;color:#176b42;font-size:14px}
+.report-objectives .quality-track{grid-column:1/-1}
+.report-documents{display:grid;gap:0;margin:8px 0 20px}
+.report-documents article{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 4px;border-top:1px solid #e8eef1}
+.report-documents article span{display:grid;gap:4px;min-width:0}
+.report-documents article b{font-size:11px;color:#29485d}
+.report-documents article small,.report-documents article time{font-size:9px;color:#82919c}
+.report-documents article time{white-space:nowrap}
+@media(max-width:520px){.report-documents article{align-items:flex-start;flex-direction:column;gap:5px}}
