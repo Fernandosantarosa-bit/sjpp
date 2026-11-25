@@ -102,3 +102,36 @@
 .list-search{margin-bottom:14px}.list-search input{width:100%;box-sizing:border-box;border:1px solid #dce5ec;border-radius:8px;padding:11px;font-size:12px}
 @media(max-width:1100px){.dashboard-kpis{grid-template-columns:repeat(3,minmax(0,1fr))}.dashboard-lower{grid-template-columns:1fr}}
 @media(max-width:760px){.dashboard-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.dashboard-welcome{padding:20px}.dashboard-card{padding:16px}.dashboard-card article{grid-template-columns:60px minmax(0,1fr)}.dashboard-card article small{display:none}}
+
+/* Planeamento e execução de tarefas institucionais */
+.tasks-panel{display:grid;grid-template-columns:minmax(290px,.85fr) minmax(0,1.6fr);gap:20px;align-items:start}
+.task-editor,.tasks-list{background:#fff;border:1px solid #e5ecf1;border-radius:16px;padding:24px;box-shadow:0 8px 28px #19375008}
+.task-editor{border-top:3px solid #16834b}
+.task-editor label{display:flex;flex-direction:column;gap:7px;margin:14px 0;font-size:11px;font-weight:650;color:#526678}
+.task-editor input,.task-editor textarea,.task-editor select,.tasks-toolbar select{width:100%;box-sizing:border-box;border:1px solid #dce5ec;border-radius:9px;background:#fbfcfd;padding:11px 12px;color:#1b3449;font:inherit}
+.task-editor textarea{min-height:100px;resize:vertical}
+.task-editor input:focus,.task-editor textarea:focus,.task-editor select:focus,.tasks-toolbar select:focus{outline:0;border-color:#16834b;box-shadow:0 0 0 4px #16834b14;background:#fff}
+.task-fields{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.task-fields label:first-child{grid-column:1/-1}
+.tasks-list{border-top:3px solid #c93636}
+.tasks-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:18px}
+.tasks-toolbar h2{font:700 21px Georgia,serif;color:#17344b;margin:0 0 5px}
+.tasks-toolbar p{font-size:11px;color:#8492a0;margin:0}
+.tasks-toolbar select{width:auto;min-width:145px;font-size:11px}
+.task-summary{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin-bottom:16px}
+.task-summary span{display:flex;flex-direction:column;gap:4px;padding:12px;background:#f6f9fa;border-radius:10px;font-size:10px;color:#718395}
+.task-summary b{font-size:22px;color:#18384e}
+.task-item{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:17px 0;border-top:1px solid #edf1f4}
+.task-main{min-width:0}
+.task-tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.task-priority,.task-status{font-size:9px;font-weight:800;padding:5px 8px;border-radius:20px;background:#eef2f5;color:#637483}
+.task-priority.urgent{background:#ffe8e6;color:#b52c25}.task-priority.high{background:#fff0df;color:#a65d13}.task-priority.low{background:#eaf3ff;color:#386a9c}
+.task-status.in_progress{background:#e8f2ff;color:#356da5}.task-status.completed{background:#e7f5ec;color:#167346}.task-status.cancelled{background:#f0eeee;color:#777}
+.task-main h3{font-size:13px;color:#203e54;margin:0 0 6px}
+.task-main p{font-size:11px;color:#758594;line-height:1.6;margin:0 0 7px;white-space:pre-wrap}
+.task-main small{font-size:10px;color:#8a98a3}
+.task-actions{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:6px;flex-shrink:0}
+.task-actions button{border:1px solid #dfe8ed;border-radius:8px;background:#fff;color:#36546a;padding:8px 10px;font-size:10px;font-weight:700;cursor:pointer}
+.task-actions button:hover{border-color:#16834b;color:#16834b}
+@media(max-width:1100px){.tasks-panel{grid-template-columns:1fr}}
+@media(max-width:620px){.task-editor,.tasks-list{padding:16px}.tasks-toolbar{align-items:flex-start;flex-direction:column}.tasks-toolbar select{width:100%}.task-item{align-items:flex-start;flex-direction:column}.task-actions{justify-content:flex-start;width:100%}.task-summary span{padding:9px}.task-summary b{font-size:19px}}
