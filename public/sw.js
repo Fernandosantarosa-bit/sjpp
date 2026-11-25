@@ -22,7 +22,8 @@ self.addEventListener('fetch', event => {
     }).catch(() => caches.match('/')));
     return;
   }
-  if (/\\.(?:js|css|svg|png|webp|ico|woff2?)$/i.test(url.pathname) || url.pathname === '/manifest.webmanifest') {
+  const isStaticAsset = ['.js', '.css', '.svg', '.png', '.webp', '.ico', '.woff', '.woff2'].some(ext => url.pathname.endsWith(ext));
+  if (isStaticAsset || url.pathname === '/manifest.webmanifest') {
     event.respondWith(caches.match(request).then(cached => cached || fetch(request).then(response => {
       if (response.ok) { const copy = response.clone(); caches.open(CACHE_NAME).then(cache => cache.put(request, copy)); }
       return response;
