@@ -58,3 +58,5 @@
 .document:hover{border-color:#a9c7b4;background:#fcfefc}
 :focus-visible{outline:3px solid #e7bd37;outline-offset:3px}
 @media(max-width:650px){.hero-side-note{display:none}.news-tools{display:block}.news-tools label{display:block;margin-bottom:8px}.news-card .news-cover{height:170px}}
+
+.form-privacy-note{margin:-4px 0 18px;padding:12px 14px;border-left:3px solid var(--sjpp-yellow);background:#ffffff0d;color:#d9e4e5;font-size:12px;line-height:1.7}
