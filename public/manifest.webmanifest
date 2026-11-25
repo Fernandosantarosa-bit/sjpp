@@ -1,0 +1,20 @@
+{
+  "name": "Partido Social Juntos Pelo Povo — S.J.P.P.",
+  "short_name": "S.J.P.P.",
+  "description": "Aplicação institucional do Partido Social Juntos Pelo Povo.",
+  "lang": "pt-AO",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#16834b",
+  "icons": [
+    {
+      "src": "/logo-sjpp.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
