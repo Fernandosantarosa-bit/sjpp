@@ -289,3 +289,33 @@
 .evaluation-actions .evaluation-danger{background:#fff0f0;color:#a12d2d}
 @media(max-width:900px){.evaluation-panel{grid-template-columns:1fr}.evaluation-item{grid-template-columns:1fr}.evaluation-actions{justify-content:flex-start}}
 @media print{.evaluation-editor,.evaluation-actions{display:none!important}.evaluation-panel{display:block}.evaluation-list{box-shadow:none;border:0}}
+
+
+/* Plano de melhoria contínua associado às avaliações */
+.evaluation-workspace{display:grid;gap:22px}
+.improvement-section{display:grid;gap:18px}
+.improvement-heading{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:23px 25px;background:linear-gradient(120deg,#12344e,#1b4a4a);border-radius:15px;color:#fff}
+.improvement-heading small{font-size:9px;letter-spacing:1.8px;font-weight:800;color:#b9d8c7}
+.improvement-heading h2{font:700 23px Georgia,serif;color:#fff;margin:7px 0}
+.improvement-heading p{font-size:11px;color:#d5e4e5;margin:0;line-height:1.6}
+.improvement-kpis{display:flex;gap:9px;flex-wrap:wrap}
+.improvement-kpis span{display:flex;flex-direction:column;gap:4px;min-width:90px;padding:12px;background:#ffffff13;border:1px solid #ffffff24;border-radius:10px;font-size:9px;color:#d7e5e5}
+.improvement-kpis b{font-size:22px;color:#fff}
+.improvement-layout{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(0,1.4fr);gap:18px;align-items:start}
+.improvement-editor h3,.improvement-list h3{font:700 19px Georgia,serif;color:#17344b;margin:0 0 14px}
+.evaluation-form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.improvement-list{background:#fff;border:1px solid #e5ecf1;border-top:3px solid #c93636;border-radius:15px;padding:22px;box-shadow:0 8px 28px #19375008}
+.improvement-item{padding:16px 0;border-top:1px solid #edf1f4}
+.improvement-item-top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.improvement-item h4{font-size:14px;color:#203e54;margin:0 0 5px}
+.improvement-item small{font-size:10px;color:#8492a0}
+.improvement-item p{font-size:11px;line-height:1.6;color:#65798a;white-space:pre-wrap}
+.improvement-meta{display:flex;flex-wrap:wrap;gap:8px 16px;font-size:10px;color:#7a8995}
+.improvement-meta b{color:#344e62}
+.improvement-evidence{padding:10px 12px;background:#f4f8f6;border-radius:8px}
+.evaluation-status.pending,.evaluation-status.blocked{background:#fff2df;color:#94600e}
+.evaluation-status.in_progress{background:#e8f2ff;color:#356da5}
+.evaluation-status.completed{background:#e7f5ec;color:#167346}
+.evaluation-status.cancelled{background:#f0eeee;color:#777}
+@media(max-width:1000px){.improvement-layout{grid-template-columns:1fr}.improvement-heading{align-items:flex-start;flex-direction:column}}
+@media(max-width:600px){.improvement-heading{padding:18px}.improvement-list{padding:16px}.improvement-item-top{align-items:flex-start;flex-direction:column}.evaluation-form-row{grid-template-columns:1fr}}
